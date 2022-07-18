@@ -32,7 +32,7 @@ jobs:
           ENVIRONMENT=false
           BRANCH=false
 
-          if grep -q "develop" <<< "${{ github.base_ref }}"; then
+          if grep -q "/feature/" <<< "${{ github.base_ref }}"; then
             ENVIRONMENT=qa
             BRANCH="${{ github.base_ref }}"
           elif grep -q "/release/" <<< "${{ github.base_ref }}"; then
